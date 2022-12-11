@@ -13,6 +13,7 @@ public class Main {
         UserServiceInterface userServiceBean = context.getBean("userServiceBean", UserServiceInterface.class);
 
         System.out.println(userServiceBean.getUser());
+
     }
 
 }
