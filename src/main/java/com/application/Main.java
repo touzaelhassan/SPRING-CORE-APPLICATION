@@ -1,6 +1,6 @@
 package com.application;
 
-import com.application.services.interfaces.ProductServiceInterface;
+import com.application.services.interfaces.UserServiceInterface;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -10,10 +10,9 @@ public class Main {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        ProductServiceInterface productServiceClass = (ProductServiceInterface) context.getBean("productServiceClass");
+        UserServiceInterface userServiceBean = context.getBean("userServiceBean", UserServiceInterface.class);
 
-        System.out.println(productServiceClass.test());
-
+        System.out.println(userServiceBean.getUser());
     }
 
 }

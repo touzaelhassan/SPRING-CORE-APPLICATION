@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="productRepositoryClass" class="com.application.repositories.classes.ProductRepositoryClass"></bean>
+    <bean id="userRepositoryBean" class="com.application.repositories.classes.UserRepositoryClass"></bean>
 
-    <bean id="productServiceClass" class="com.application.services.classes.ProductServiceClass">
-        <constructor-arg ref="productRepositoryClass"/>
+    <bean id="userServiceBean" class="com.application.services.classes.UserServiceClass">
+        <constructor-arg ref="userRepositoryBean"/>
     </bean>
 
 </beans>

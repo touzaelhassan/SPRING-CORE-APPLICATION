@@ -1,4 +1,3 @@
 package com.application.controllers;
 
-public class ProductController {
-}
+public class UserController { }
